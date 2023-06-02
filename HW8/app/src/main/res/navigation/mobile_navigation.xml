@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_family"
+        android:name="com.sumeyra.homework8.ui.group.family.FamilyFragment"
+        android:label="@string/menu_family"
+        tools:layout="@layout/fragment_family" />
+
+    <fragment
+        android:id="@+id/nav_school"
+        android:name="com.sumeyra.homework8.ui.group.school.SchoolFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_school" />
+
+    <fragment
+        android:id="@+id/nav_friend"
+        android:name="com.sumeyra.homework8.ui.group.friend.FriendFragment"
+        android:label="@string/menu_friend"
+        tools:layout="@layout/fragment_friend" />
+
+
+    <fragment
+        android:id="@+id/nav_work"
+        android:name="com.sumeyra.homework8.ui.group.work.WorkFragment"
+        android:label="@string/menu_work"
+        tools:layout="@layout/fragment_work" />
+
+
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.sumeyra.homework8.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.sumeyra.homework8.ui.add.AddFragment"
+        android:label="@string/add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.sumeyra.homework8.ui.update.UpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update" >
+        <argument
+            android:name="itemObject"
+            app:argType="com.sumeyra.homework8.model.UserModel" />
+        <action
+            android:id="@+id/action_updateFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+</navigation>
