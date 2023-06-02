@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dropdown_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_26sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_26sdp"
+        android:hint="Select Exchange Rate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/acme"
+            android:inputType="none"
+            android:text="us dolar" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_forex_buying"
+        style="@style/TextStyle"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_46sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:text="Forex Buying: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dropdown_layout" />
+
+    <TextView
+        android:id="@+id/tv_forex_buying_value"
+        style="@style/TextValueStyle"
+        android:text="120"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_forex_buying"
+        app:layout_constraintStart_toEndOf="@+id/tv_forex_buying"
+        app:layout_constraintTop_toTopOf="@+id/tv_forex_buying" />
+
+    <TextView
+        android:id="@+id/tv_forex_selling"
+        style="@style/TextStyle"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="Forex Selling: "
+        app:layout_constraintStart_toStartOf="@+id/tv_forex_buying"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forex_buying" />
+
+    <TextView
+        android:id="@+id/tv_forex_selling_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:text="120"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_forex_selling"
+        app:layout_constraintStart_toEndOf="@+id/tv_forex_selling"
+        app:layout_constraintTop_toTopOf="@+id/tv_forex_selling"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_banknote_buying"
+        style="@style/TextStyle"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="Banknote Buying"
+        app:layout_constraintStart_toStartOf="@+id/tv_forex_selling"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forex_selling" />
+
+    <TextView
+        android:id="@+id/tv_banknote_buying_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:text="120"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_banknote_buying"
+        app:layout_constraintStart_toEndOf="@+id/tv_banknote_buying"
+        app:layout_constraintTop_toTopOf="@+id/tv_banknote_buying" />
+
+    <TextView
+        android:id="@+id/tv_banknote_selling"
+        style="@style/TextStyle"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="Banknote Selling"
+        app:layout_constraintStart_toStartOf="@+id/tv_banknote_buying"
+        app:layout_constraintTop_toBottomOf="@+id/tv_banknote_buying" />
+
+    <TextView
+        android:id="@+id/tv_banknote_selling_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:text="120"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_banknote_selling"
+        app:layout_constraintStart_toEndOf="@+id/tv_banknote_selling"
+        app:layout_constraintTop_toTopOf="@+id/tv_banknote_selling" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/TextStyle"
+        android:layout_marginTop="@dimen/_36sdp"
+        android:text="TextView"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
