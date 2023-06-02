@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MyBio</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="home_page">Home Page</string>
+    <string name="about">About</string>
+    <string name="about_page">About Page</string>
+    <string name="gallery">Gallery</string>
+    <string name="gallery_page">Gallery Page</string>
+    <string name="communication">Communication</string>
+    <string name="communication_page">Communication Page</string>
+    <string name="blog">Blog</string>
+    <string name="blog_page">Blog Page</string>
+    <string name="user_job">Android Developer</string>
+    <string name="user_name">Sümeyra Özuğur</string>
+    <string name="github">https://github.com/sumeyraozugur</string>
+    <string name="linkedin">https://www.linkedin.com/in/sumeyra-ozugur22/</string>
+    <string name="medium">https://ozugursumeyra.medium.com/</string>
+    <string name="insegram">https://www.instagram.com/sumeyraozugur/</string>
+    <string name="dismiss">"DISMISS"</string>
+    <string name="gmail">Gmail: ozugursumeyra@gmail.com</string>
+    <string name="who_am_i">Who am I ?</string>
+    <string name="first_item">👉🏻 Having graduated from Muğla Sıtkı Koçman University</string>
+    <string name="second_item">👉🏻 I’m working as a Software Engineer at Yeo.</string>
+    <string name="third_item">👉🏻 Mobile lover, dreamer, someone who loves to help.</string>
+    <string name="fourth_item">👉🏻 Ask me about Python, Kotlin, Flutter.</string>
+    <string name="fifth_item">👉🏻 My hobbies are walking and writing.</string>
+    <string name="wanna_connect_me">If you want to contact me, just click one of them.</string>
+
+</resources>

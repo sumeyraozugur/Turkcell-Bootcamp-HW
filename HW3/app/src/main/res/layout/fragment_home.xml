@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.HomeFragment">
+
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_about"
+        style="@style/ButtonStyle"
+        android:layout_marginTop="@dimen/_42sdp"
+        android:text="@string/about"
+        app:layout_constraintTop_toBottomOf="@+id/tv_job"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_gallery"
+        style="@style/ButtonStyle"
+        android:text="@string/gallery"
+        app:layout_constraintEnd_toEndOf="@+id/btn_about"
+        app:layout_constraintStart_toStartOf="@+id/btn_about"
+        app:layout_constraintTop_toBottomOf="@+id/btn_about" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_connection"
+        style="@style/ButtonStyle"
+        android:text="@string/communication"
+        app:layout_constraintEnd_toEndOf="@+id/btn_gallery"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_gallery"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gallery" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_blog"
+        style="@style/ButtonStyle"
+        android:layout_marginBottom="16dp"
+        android:text="@string/blog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_connection"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_connection"
+        app:layout_constraintTop_toBottomOf="@+id/btn_connection"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iv_profile_picture"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/user_name"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_profile_picture"
+        app:layout_constraintStart_toStartOf="@+id/iv_profile_picture"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile_picture" />
+
+    <TextView
+        android:id="@+id/tv_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/acme"
+        android:text="@string/user_job"
+        app:layout_constraintEnd_toEndOf="@+id/iv_profile_picture"
+        app:layout_constraintStart_toStartOf="@+id/iv_profile_picture"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

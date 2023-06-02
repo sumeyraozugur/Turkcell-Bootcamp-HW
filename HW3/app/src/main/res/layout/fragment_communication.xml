@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.communication.CommunicationFragment">
+
+    <include
+        android:id="@+id/toolbar_communication"
+        layout="@layout/toolbar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_240sdp"
+        android:layout_marginTop="46dp"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_communication"
+        app:lottie_fileName="girls.json" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TitleStyle"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Connect With Me"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottie" />
+
+    <TextView
+        android:id="@+id/tv_gmail"
+        style="@style/AboutTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/acme"
+        android:gravity="center"
+        android:text="@string/wanna_connect_me"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/iv_github"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/github"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="@+id/tv_gmail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gmail"
+        style="@style/ConnectionIVStyle" />
+
+    <ImageView
+        android:id="@+id/iv_linkedin"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/linkedin"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_github"
+        app:layout_constraintEnd_toStartOf="@+id/iv_medium"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toEndOf="@+id/iv_github"
+        app:layout_constraintTop_toTopOf="@+id/iv_github"
+        app:layout_constraintVertical_bias="0.0"
+        style="@style/ConnectionIVStyle"/>
+
+    <ImageView
+        android:id="@+id/iv_medium"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/medium"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_linkedin"
+        app:layout_constraintStart_toEndOf="@+id/iv_linkedin"
+        app:layout_constraintTop_toTopOf="@+id/iv_linkedin"
+        style="@style/ConnectionIVStyle"/>
+
+    <ImageView
+        android:id="@+id/iv_gmail"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/gmail"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_insegram"
+        app:layout_constraintEnd_toEndOf="@+id/tv_gmail"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toEndOf="@+id/iv_insegram"
+        app:layout_constraintTop_toTopOf="@+id/iv_insegram"
+        app:layout_constraintVertical_bias="0.0"
+        style="@style/ConnectionIVStyle"/>
+
+    <ImageView
+        android:id="@+id/iv_insegram"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/instagram"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_medium"
+        app:layout_constraintStart_toEndOf="@+id/iv_medium"
+        app:layout_constraintTop_toTopOf="@+id/iv_medium"
+        style="@style/ConnectionIVStyle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

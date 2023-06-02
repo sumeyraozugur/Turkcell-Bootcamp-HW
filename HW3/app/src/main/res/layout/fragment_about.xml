@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.about.AboutFragment">
+
+    <include
+        android:id="@+id/about_toolbar"
+        layout="@layout/toolbar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_height="@dimen/_250sdp"
+        app:layout_constraintTop_toTopOf="@+id/about_toolbar"
+        app:lottie_fileName="thinking.json" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:text="@string/who_am_i"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottie"
+        style="@style/TitleStyle" />
+
+    <TextView
+        android:id="@+id/tv_item_one"
+        style="@style/AboutTextStyle"
+        android:layout_width="0dp"
+        android:text="@string/first_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_item_two"
+        style="@style/AboutTextStyle"
+        android:layout_width="0dp"
+        android:text="@string/second_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_one" />
+
+    <TextView
+        android:id="@+id/tv_item_three"
+        style="@style/AboutTextStyle"
+        android:layout_width="0dp"
+        android:text="@string/third_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_two" />
+
+    <TextView
+        android:id="@+id/tv_item_four"
+        style="@style/AboutTextStyle"
+        android:layout_width="0dp"
+        android:text="@string/fourth_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_three" />
+
+    <TextView
+        android:id="@+id/tv_item_five"
+        style="@style/AboutTextStyle"
+        android:layout_width="0dp"
+        android:text="@string/fifth_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_four" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
