@@ -11,3 +11,4 @@ I mean, this repo will contain given research assignments.⚡️
   * HW6 | (about jsons) -> [Detaile](https://github.com/sumeyraozugur/Turkcell-Bootcamp-HW/tree/main/HW6) 
   * HW7 | (Note App) -> [Detaile](https://github.com/sumeyraozugur/Turkcell-Bootcamp-HW/tree/main/HW7) 
   * HW8 | (Users App) -> [Detaile](https://github.com/sumeyraozugur/Turkcell-Bootcamp-HW/tree/main/HW8) 
+  * HW9 | (Trip App) -> [Detaile](https://github.com/sumeyraozugur/Turkcell-Bootcamp-HW/tree/main/HW9) 
