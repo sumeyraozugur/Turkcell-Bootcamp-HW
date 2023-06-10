@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.sumeyra.mybio.R
 import com.sumeyra.mybio.data.GalleryList.galleryList
 import com.sumeyra.mybio.databinding.FragmentGalleryBinding
@@ -23,6 +24,7 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
             toolbarGallery.tvToolbarTitle.text = getString(R.string.gallery_page)
             toolbarGallery.ivArrowBack.setOnClickListener {
                 Navigation.back(it)
+
             }
 
 

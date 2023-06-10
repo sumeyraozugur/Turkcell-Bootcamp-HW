@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.sumeyra.mybio.R
 import com.sumeyra.mybio.databinding.FragmentHomeBinding
 import com.sumeyra.mybio.delegate.viewBinding
@@ -26,6 +27,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
             btnBlog.setOnClickListener {
                 Navigation.sent(it,R.id.action_homeFragment_to_blogFragment)
+                //findNavController().navigate(R.id.action_homeFragment_to_blogFragment)
+
             }
 
             btnGallery.setOnClickListener {

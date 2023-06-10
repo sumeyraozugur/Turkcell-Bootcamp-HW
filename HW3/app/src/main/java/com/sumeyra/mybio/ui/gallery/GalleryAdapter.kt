@@ -3,6 +3,7 @@ package com.sumeyra.mybio.ui.gallery
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import com.sumeyra.mybio.databinding.ItemGalleryBinding
 import com.sumeyra.mybio.model.GalleryModel
 import com.sumeyra.mybio.utils.extension.loadImage
@@ -25,6 +26,7 @@ class GalleryAdapter(
         fun bind(galleryModel: GalleryModel) = with(itemGalleryBinding) {
             tvTitle.text = galleryModel.title
             ivPicture.loadImage(galleryModel.img)
+
 
         }
     }

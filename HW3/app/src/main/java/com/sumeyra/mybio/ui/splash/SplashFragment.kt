@@ -25,6 +25,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 
             override fun onAnimationEnd(animation: Animator) {
                 Navigation.sent(view,R.id.action_splashFragment_to_homeFragment)
+
             }
 
             override fun onAnimationStart(animation: Animator) = Unit
