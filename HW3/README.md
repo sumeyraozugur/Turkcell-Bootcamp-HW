@@ -1,5 +1,5 @@
-## My Bio
-<b>Explanation:</b> An application was designed in which we introduce ourselves.
+## My Bio🌿
+<b>Explanation🎃:</b> An application was designed in which we introduce ourselves.
 
 <div>
 <table>
