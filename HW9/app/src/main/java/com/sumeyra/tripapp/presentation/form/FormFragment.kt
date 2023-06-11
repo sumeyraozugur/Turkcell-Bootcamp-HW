@@ -1,4 +1,4 @@
-package com.sumeyra.tripapp.form
+package com.sumeyra.tripapp.presentation.form
 
 import android.os.Bundle
 import android.view.View
@@ -10,15 +10,15 @@ import com.sumeyra.tripapp.R
 import com.sumeyra.tripapp.databinding.FragmentFormBinding
 import com.sumeyra.tripapp.delegete.viewBinding
 import com.sumeyra.tripapp.utils.extension.showErrorSnackBar
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class FormFragment : Fragment(R.layout.fragment_form) {
     private val binding by viewBinding(FragmentFormBinding::bind)
     private val viewModel by viewModels<FormViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //viewModel = ViewModelProvider(requireActivity())[FormViewModel::class.java]
         initObserver()
 
         with(binding) {

@@ -1,23 +1,17 @@
-package com.sumeyra.tripapp.sigin
+package com.sumeyra.tripapp.presentation.sigin
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.sumeyra.tripapp.repository.AuthRepository
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class SignInViewModel:ViewModel() {
-
-    private val firebaseRepo = AuthRepository()
-
+@HiltViewModel
+class SignInViewModel @Inject constructor(private val firebaseRepo : AuthRepository):ViewModel() {
 
     val isSignIn: LiveData<Boolean> = firebaseRepo.isSignIn
 
     fun signIn(email:String,password:String) = firebaseRepo.signIn(email, password)
-
-
-
 
 }
 

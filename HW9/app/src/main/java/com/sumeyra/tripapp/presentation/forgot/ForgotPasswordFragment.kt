@@ -1,4 +1,4 @@
-package com.sumeyra.tripapp.forgot
+package com.sumeyra.tripapp.presentation.forgot
 
 import android.os.Bundle
 import android.view.View
@@ -10,8 +10,9 @@ import com.sumeyra.tripapp.databinding.FragmentForgotPasswordBinding
 import com.sumeyra.tripapp.delegete.viewBinding
 import com.sumeyra.tripapp.utils.extension.isValidEmail
 import com.sumeyra.tripapp.utils.extension.showErrorSnackBar
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ForgotPasswordFragment : Fragment(R.layout.fragment_forgot_password) {
     private val binding by viewBinding(FragmentForgotPasswordBinding::bind)
     private lateinit var viewModel: ForgotPasswordViewModel
@@ -43,6 +44,4 @@ class ForgotPasswordFragment : Fragment(R.layout.fragment_forgot_password) {
             }
         }
     }
-
-
 }

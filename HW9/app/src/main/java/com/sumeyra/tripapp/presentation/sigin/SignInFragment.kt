@@ -1,4 +1,4 @@
-package com.sumeyra.tripapp.sigin
+package com.sumeyra.tripapp.presentation.sigin
 
 import android.os.Bundle
 import android.view.View
@@ -13,8 +13,9 @@ import com.sumeyra.tripapp.utils.extension.isNullorEmpty
 import com.sumeyra.tripapp.utils.extension.isValidEmail
 import com.sumeyra.tripapp.utils.extension.sent
 import com.sumeyra.tripapp.utils.extension.showErrorSnackBar
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class SignInFragment : Fragment(R.layout.fragment_sign_in) {
     private val binding by viewBinding(FragmentSignInBinding::bind)
     private lateinit var viewModel: SignInViewModel
@@ -49,9 +50,9 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
 
                 }
             }
-
         }
     }
+
 
     private fun initObservers() {
         viewModel.isSignIn.observe(viewLifecycleOwner) {

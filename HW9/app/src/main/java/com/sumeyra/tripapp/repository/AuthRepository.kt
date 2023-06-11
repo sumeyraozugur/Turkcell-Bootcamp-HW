@@ -2,19 +2,20 @@ package com.sumeyra.tripapp.repository
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.sumeyra.tripapp.utils.constant.Constant.E_MAIL
 import com.sumeyra.tripapp.utils.constant.Constant.ID
 import com.sumeyra.tripapp.utils.constant.Constant.SIGN_IN
 import com.sumeyra.tripapp.utils.constant.Constant.SIGN_UP
 import com.sumeyra.tripapp.utils.constant.Constant.SUCCESS
 import com.sumeyra.tripapp.utils.constant.Constant.USERS_PATH
+import javax.inject.Inject
 
-class AuthRepository {
-    private var auth = Firebase.auth
-    private var firebaseFirestore = Firebase.firestore
+class AuthRepository @Inject constructor(
+    private val auth: FirebaseAuth,
+    private val firebaseFirestore: FirebaseFirestore
+) {
     var isLoading = MutableLiveData<Boolean>()
     var isSignIn = MutableLiveData<Boolean>()
     var isSuccess = MutableLiveData<Boolean>()
@@ -57,7 +58,7 @@ class AuthRepository {
     //SignIn
     fun signIn(email: String, password: String) {
         isLoading.value = true
-        auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {authResult->
+        auth.signInWithEmailAndPassword(email, password).addOnSuccessListener { authResult ->
             isLoading.value = false
             authResult?.let {
                 isSignIn.value = true
@@ -70,6 +71,7 @@ class AuthRepository {
     }
 
     //Change Password
+    //Change Password
     fun changePassword(email: String) {
         isLoading.value = true
         auth.sendPasswordResetEmail(email).addOnSuccessListener {
@@ -80,6 +82,4 @@ class AuthRepository {
             isLoading.value = false
         }
     }
-
-
 }

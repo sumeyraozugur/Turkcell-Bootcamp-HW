@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/app_background"
-    tools:context=".form.FormFragment">
+    tools:context=".presentation.form.FormFragment">
 
     <TextView
+        style="@style/TitleStyle"
         android:text="Fill Form"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/TitleStyle" />
-
-
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,8 +21,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_130sdp"
         android:background="@drawable/rounded_shape"
-        android:backgroundTint="@color/white"
-        >
+        android:backgroundTint="@color/white">
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -33,14 +29,14 @@
             android:layout_width="@dimen/_300sdp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="16dp"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraint">
+            app:layout_constraintTop_toBottomOf="@+id/constraint"
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_title"
@@ -57,20 +53,19 @@
             android:id="@+id/til_city"
             android:layout_width="@dimen/_300sdp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/til_title"
-            android:layout_marginTop="@dimen/_12sdp">
+            app:layout_constraintTop_toBottomOf="@+id/til_title">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_city"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
                 android:hint="City"
-                android:inputType="text"
-                />
+                android:inputType="text" />
 
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -79,12 +74,12 @@
             android:id="@+id/til_notes"
             android:layout_width="@dimen/_300sdp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/til_city"
-            android:layout_marginTop="@dimen/_12sdp">
+            app:layout_constraintTop_toBottomOf="@+id/til_city">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_notes"
@@ -92,12 +87,10 @@
                 android:layout_height="@dimen/_60sdp"
                 android:hint="Notes"
                 android:inputType="textMultiLine"
-                android:minLines="3"
-                />
+                android:minLines="3" />
 
 
         </com.google.android.material.textfield.TextInputLayout>
-
 
 
         <com.google.android.material.button.MaterialButton
@@ -105,9 +98,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:gravity="center"
             android:layout_marginTop="@dimen/_22sdp"
             android:layout_marginEnd="16dp"
+            android:gravity="center"
             android:text="Save"
             app:cornerRadius="@dimen/_12sdp"
             app:layout_constraintEnd_toEndOf="parent"

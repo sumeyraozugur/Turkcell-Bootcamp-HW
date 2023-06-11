@@ -8,8 +8,8 @@ object Constant {
     const val SUCCESS = "Success"
     const val ID = "id"
     const val E_MAIL = "email"
-    const val PRODUCT_TITLE = "title"
-    const val PRODUCT_DESCRIPTION = "description"
+    const val FORM_TITLE = "title"
+    const val FORM_DESCRIPTION = "description"
     const val FORM_CITY = "city"
 
 }

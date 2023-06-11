@@ -1,11 +1,14 @@
-package com.sumeyra.tripapp.home
+package com.sumeyra.tripapp.presentation.home
 
 import androidx.lifecycle.ViewModel
 import com.sumeyra.tripapp.model.CityModel
 import com.sumeyra.tripapp.repository.FormRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class HomeViewModel:ViewModel() {
-    private val firebaseRepo = FormRepository()
+@HiltViewModel
+class HomeViewModel @Inject constructor( private val firebaseRepo : FormRepository):ViewModel() {
+
     var cityList = firebaseRepo.cityList
 
     init {

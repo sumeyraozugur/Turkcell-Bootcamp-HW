@@ -1,4 +1,4 @@
-package com.sumeyra.tripapp.home
+package com.sumeyra.tripapp.presentation.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

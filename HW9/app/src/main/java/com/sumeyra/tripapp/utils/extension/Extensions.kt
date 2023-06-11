@@ -14,9 +14,19 @@ fun View.showErrorSnackBar(message: String, errorMessage: Boolean) {
     val snackBarView = snackBar.view
 
     if (errorMessage) {
-        snackBarView.setBackgroundColor(ContextCompat.getColor(context, R.color.color_snack_bar_error))
+        snackBarView.setBackgroundColor(
+            ContextCompat.getColor(
+                context,
+                R.color.color_snack_bar_error
+            )
+        )
     } else {
-        snackBarView.setBackgroundColor(ContextCompat.getColor(context, R.color.color_snack_bar_success))
+        snackBarView.setBackgroundColor(
+            ContextCompat.getColor(
+                context,
+                R.color.color_snack_bar_success
+            )
+        )
     }
     snackBar.show()
 }

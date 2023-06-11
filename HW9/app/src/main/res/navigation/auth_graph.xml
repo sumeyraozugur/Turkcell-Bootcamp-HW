@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.sumeyra.tripapp.sigin.SignInFragment"
+        android:name="com.sumeyra.tripapp.presentation.sigin.SignInFragment"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" >
+        tools:layout="@layout/fragment_sign_in">
         <action
             android:id="@+id/action_signInFragment_to_main_graph"
             app:destination="@id/main_graph" />
@@ -22,14 +22,18 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.sumeyra.tripapp.signup.SignUpFragment"
+        android:name="com.sumeyra.tripapp.presentation.signup.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_main_graph"
+            app:destination="@id/main_graph" />
+    </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.sumeyra.tripapp.forgot.ForgotPasswordFragment"
+        android:name="com.sumeyra.tripapp.presentation.forgot.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" >
+        tools:layout="@layout/fragment_forgot_password">
         <action
             android:id="@+id/action_forgotPasswordFragment_to_signInFragment"
             app:destination="@id/signInFragment" />

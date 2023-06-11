@@ -7,18 +7,18 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.sumeyra.tripapp.home.HomeFragment"
+        android:name="com.sumeyra.tripapp.presentation.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_formFragment"
             app:destination="@id/formFragment" />
     </fragment>
     <fragment
         android:id="@+id/formFragment"
-        android:name="com.sumeyra.tripapp.form.FormFragment"
+        android:name="com.sumeyra.tripapp.presentation.form.FormFragment"
         android:label="fragment_form"
-        tools:layout="@layout/fragment_form" >
+        tools:layout="@layout/fragment_form">
         <action
             android:id="@+id/action_formFragment_to_homeFragment"
             app:destination="@id/homeFragment" />

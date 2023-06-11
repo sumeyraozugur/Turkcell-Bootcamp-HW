@@ -1,8 +1,7 @@
-package com.sumeyra.tripapp.home
+package com.sumeyra.tripapp.presentation.home
 
 import android.content.DialogInterface
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
@@ -13,8 +12,9 @@ import com.sumeyra.tripapp.databinding.FragmentHomeBinding
 import com.sumeyra.tripapp.delegete.viewBinding
 import com.sumeyra.tripapp.model.CityModel
 import com.sumeyra.tripapp.utils.extension.sent
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class HomeFragment : Fragment(R.layout.fragment_home) {
     private val binding by viewBinding(FragmentHomeBinding::bind)
     private val homeAdapter by lazy { HomeAdapter(onClick = ::onClick) }
@@ -25,8 +25,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             val alertDialogBuilder = AlertDialog.Builder(it)
                 .setTitle("Are you sure you want to delete?")
                 .setPositiveButton("Yes") { dialogInterface: DialogInterface, i: Int ->
-                viewModel.deleteFromFirebase(cityModel)
-            }
+                    viewModel.deleteFromFirebase(cityModel)
+                }
             alertDialogBuilder.setNegativeButton("No") { dialogInterface: DialogInterface, i: Int ->
 
             }
@@ -36,7 +36,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
     }
-
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -55,9 +54,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         with(binding) {
             viewModel.cityList.observe(viewLifecycleOwner) { productList ->
                 homeAdapter.setData(productList)
-                productList.forEach {
-                    Log.v("home", it.cityName)
-                }
             }
 
         }

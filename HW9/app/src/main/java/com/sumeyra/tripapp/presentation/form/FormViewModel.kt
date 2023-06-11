@@ -1,15 +1,14 @@
-package com.sumeyra.tripapp.form
+package com.sumeyra.tripapp.presentation.form
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.sumeyra.tripapp.repository.FormRepository
-import kotlinx.coroutines.channels.Channel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class FormViewModel:ViewModel() {
-    private val firebaseRepo = FormRepository()
-
+@HiltViewModel
+class FormViewModel @Inject constructor(private val firebaseRepo : FormRepository):ViewModel() {
     val isOkey: LiveData<Boolean> = firebaseRepo.isOkey
-
 
     fun addForm(title: String, city: String, notes: String) {
         firebaseRepo.addForm(title, city, notes)
